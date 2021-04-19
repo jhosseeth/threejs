@@ -1,0 +1,24 @@
+{
+  "name": "threejs",
+  "version": "1.0.0",
+  "description": "Test for use threeJs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhosseeth/threejs.git"
+  },
+  "author": "Jhoss Naranjo",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/jhosseeth/threejs/issues"
+  },
+  "homepage": "https://github.com/jhosseeth/threejs#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "three": "^0.127.0"
+  }
+}
