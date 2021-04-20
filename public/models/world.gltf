@@ -1,0 +1,318 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.5.17",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                4
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "BezierCircle",
+            "rotation" : [
+                0.7071068286895752,
+                0,
+                0,
+                0.7071067094802856
+            ],
+            "scale" : [
+                1564.7950439453125,
+                1564.7952880859375,
+                1564.7952880859375
+            ]
+        },
+        {
+            "mesh" : 0,
+            "name" : "Earth_Surface.mat_0",
+            "rotation" : [
+                0,
+                0.8767604231834412,
+                0,
+                -0.48092737793922424
+            ]
+        },
+        {
+            "children" : [
+                1
+            ],
+            "name" : "Earth",
+            "rotation" : [
+                0.70710688829422,
+                0,
+                0,
+                0.7071067094802856
+            ],
+            "scale" : [
+                104.7908935546875,
+                104.79084777832031,
+                104.79084777832031
+            ]
+        },
+        {
+            "mesh" : 1,
+            "name" : "Text",
+            "rotation" : [
+                1,
+                0,
+                0,
+                -8.903511172775325e-08
+            ],
+            "scale" : [
+                669.3287353515625,
+                669.3287353515625,
+                1576.5911865234375
+            ],
+            "translation" : [
+                0,
+                0.00048828125,
+                0
+            ]
+        },
+        {
+            "children" : [
+                0,
+                2,
+                3
+            ],
+            "name" : "RootNode",
+            "rotation" : [
+                -0.7071068286895752,
+                0,
+                0,
+                0.7071068286895752
+            ],
+            "scale" : [
+                0.0003562764613889158,
+                0.0003562764613889158,
+                0.0003562764613889158
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "emissiveFactor" : [
+                1,
+                1,
+                1
+            ],
+            "emissiveTexture" : {
+                "index" : 0
+            },
+            "name" : "new-rose-petals",
+            "normalTexture" : {
+                "index" : 1
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 2
+                },
+                "metallicFactor" : 0
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "Material.016",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Earth_Surface.mat_0",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        },
+        {
+            "name" : "Text",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7,
+                    "material" : 1
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        },
+        {
+            "sampler" : 0,
+            "source" : 2
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Surface_mat_emissive",
+            "uri" : "Surface_mat_emissive.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Surface_mat_normal",
+            "uri" : "Surface_mat_normal.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Surface_mat_baseColor",
+            "uri" : "Surface_mat_baseColor.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 3037,
+            "max" : [
+                42.41783142089844,
+                42.67764663696289,
+                42.41783142089844
+            ],
+            "min" : [
+                -42.41783142089844,
+                -42.67764663696289,
+                -42.41783142089844
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 3037,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 3037,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 17280,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 71046,
+            "max" : [
+                8.778463363647461,
+                8.782630920410156,
+                0.28300023078918457
+            ],
+            "min" : [
+                -8.782628059387207,
+                -8.780756950378418,
+                -0.3145613372325897
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 71046,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 71046,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5125,
+            "count" : 106548,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 36444,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 36444,
+            "byteOffset" : 36444
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 24296,
+            "byteOffset" : 72888
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 34560,
+            "byteOffset" : 97184
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 852552,
+            "byteOffset" : 131744
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 852552,
+            "byteOffset" : 984296
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 568368,
+            "byteOffset" : 1836848
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 426192,
+            "byteOffset" : 2405216
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 2831408,
+            "uri" : "world.bin"
+        }
+    ]
+}
