@@ -3,6 +3,144 @@ body {
 	background: black;
 }
 
+
+/* ========================================================
+** 						To Orbit BUTTON
+** ======================================================== */
+#overCanvas {
+	width: 100vw;
+	position: absolute;
+	display: none;
+}
+
+.btn-container {
+  display: flex;
+}
+
+.btn-container a {
+  width: 100%;
+  max-width: 240px;
+  height: 54px;
+  padding: 8px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: #ff4655;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px inset rgba(236, 232, 225, 0.3);
+  position: relative;
+  margin: 10px 0;
+}
+.btn-container a.btn:hover > p {
+  color: #ece8e1;
+}
+.btn-container a.btn > p {
+  background: #ece8e1;
+  color: #0f1923;
+}
+.btn-container a.btn > p span.base {
+  border: 1px solid transparent;
+}
+.btn-container a:after, .btn-container a:before {
+  content: "";
+  width: 1px;
+  position: absolute;
+  height: 8px;
+  background: #0f1923;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.btn-container a:before {
+  right: 0;
+  left: initial;
+}
+.btn-container a p {
+  margin: 0;
+  height: 54px;
+  line-height: 54px;
+  box-sizing: border-box;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  font-family:Arial;
+}
+.btn-container a p span.base {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  border: 1px solid #ff4655;
+}
+.btn-container a p span.base:before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  left: -1px;
+  top: -1px;
+  background: #0f1923;
+  position: absolute;
+  transition: 0.3s ease-out all;
+}
+.btn-container a p span.bg {
+  left: -5%;
+  position: absolute;
+  background: #ff4655;
+  width: 0;
+  height: 100%;
+  z-index: 3;
+  transition: 0.3s ease-out all;
+  transform: skewX(-10deg);
+}
+.btn-container a p span.text {
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.btn-container a p span.text:after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  right: 0;
+  bottom: 0;
+  background: #0f1923;
+  position: absolute;
+  transition: 0.3s ease-out all;
+  z-index: 5;
+}
+.btn-container a:hover {
+  color: #ece8e1;
+}
+.btn-container a:hover span.bg {
+  width: 110%;
+}
+.btn-container a:hover span.text:after {
+  background: #ece8e1;
+}
+
+/* ========================================================
+** 						CURSOR STYLES
+** ======================================================== */
+.grab {
+	cursor: grab;
+}
+
+.grabbing {
+	cursor: grabbing;
+}
+
+
+/* ========================================================
+** 							LOADER
+** ======================================================== */
 #loader {
 	position: absolute;
 	width: 100vw;
@@ -81,7 +219,7 @@ body {
 	animation: trans3 1.3s ease-out infinite  0.7s backwards;
 }
 
-p {
+#global p {
 	color:#fff;
 	position:absolute;
 	left: -3px;

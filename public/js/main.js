@@ -69,12 +69,14 @@ loader.load(
 	// called while loading is progressing
 	xhr => {
 		let domLoader = document.getElementById("loader");
+		let domOverCanvas = document.getElementById("overCanvas");
 		let percLoaded = xhr.loaded / xhr.total * 100;
 
 		if (percLoaded == 100) {
 			// allows the charger to be visible for at least 2 seconds 
 			setTimeout(function(){
 				domLoader.style.visibility = "hidden"; // hide loader
+				domOverCanvas.style.display  = "block"; // show button to orbit model
 				document.body.appendChild(renderer.domElement); // show canvas
 			}, 2000);
 		}
@@ -83,19 +85,40 @@ loader.load(
 	error => console.log('An error happened')
 );
 
-
-// Event for click
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.update();
-
 const animate = time => {
 	time *= 0.0001;
 
-	if (text) text.rotation.z = time;
-	if (earth) earth.rotation.y = time;
+	if (text) text.rotation.z = time * (-1); // Use -1 to change the direction of rotation 
+	if (earth) earth.rotation.y = time * (-1);
 
 	renderer.render(scene, camera);
 	requestAnimationFrame(animate);
 };
 
 requestAnimationFrame(animate);
+
+
+/* ===========================================================
+** 						ORBIT CONTROLS
+** =========================================================== */
+const btn = document.getElementById("toOrbit");
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.update();
+controls.enabled = false; // the controls will not respond to user input
+
+// Add event to orbit around the model
+btn.addEventListener('click', event => {
+	controls.enabled = controls.enabled ? false : true;
+	renderer.domElement.className =  controls.enabled ? "grab" : "";
+	document.getElementsByClassName("text")[0].innerHTML = controls.enabled ? "Click to stop orbiting" : "Click to orbit"; 
+});
+
+// Add grabbing cursor style when an interaction was initiated. 
+controls.addEventListener('start', event => {
+	renderer.domElement.className = "grabbing";
+});
+
+// Add grab cursor style when an interaction has finished.
+controls.addEventListener('end', event => {
+	renderer.domElement.className = "grab";
+});
