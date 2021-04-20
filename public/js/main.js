@@ -13,7 +13,7 @@ const aspect = window.innerWidth / window.innerHeight;
 const near = 0.1;
 const far = 1000;
 const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-camera.position.z = 5;
+camera.position.z = (window.innerWidth < 500) ? 7 : 4;
 
 // Renderer
 const renderer = new THREE.WebGLRenderer();
@@ -22,6 +22,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 
 // Responsive
 window.addEventListener('resize', () => {
+	camera.position.z = (window.innerWidth < 500) ? 7 : 4;
 	renderer.setSize(window.innerWidth, window.innerHeight);
 	camera.aspect = window.innerWidth / window.innerHeight;
 	camera.updateProjectionMatrix();
@@ -82,7 +83,7 @@ loader.load(
 		}
 	},
 	// called when loading has errors
-	error => console.log('An error happened')
+	error => console.log('An error happened: ', error)
 );
 
 const animate = time => {
