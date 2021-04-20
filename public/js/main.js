@@ -18,7 +18,7 @@ camera.position.z = 5;
 // Renderer
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+
 
 // Responsive
 window.addEventListener('resize', () => {
@@ -68,7 +68,16 @@ loader.load(
 	},
 	// called while loading is progressing
 	xhr => {
-		console.log(`${xhr.loaded / xhr.total * 100}% loaded`);
+		let domLoader = document.getElementById("loader");
+		let percLoaded = xhr.loaded / xhr.total * 100;
+
+		if (percLoaded == 100) {
+			// allows the charger to be visible for at least 2 seconds 
+			setTimeout(function(){
+				domLoader.style.visibility = "hidden"; // hide loader
+				document.body.appendChild(renderer.domElement); // show canvas
+			}, 2000);
+		}
 	},
 	// called when loading has errors
 	error => console.log('An error happened')
